@@ -1,0 +1,26 @@
+{
+  "name": "auto-rebase",
+  "version": "0.1.0",
+  "description": "automatically gets the main branch code",
+  "main": "index.js",
+  "bin": {
+    "auto-merge": "./lib/cli-auto.js",
+    "merge": "./lib/cli-auto.js"
+  },
+  "scripts": {
+    "test": "./node_modules/nodeunit/bin/nodeunit test/*.test.js"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sounmos/auto-rebase.git"
+  },
+  "author": "yancy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sounmos/auto-rebase/issues"
+  },
+  "homepage": "https://github.com/sounmos/auto-rebase#readme"
+}
