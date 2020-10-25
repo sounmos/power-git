@@ -1,5 +1,5 @@
 {
-  "name": "auto-rebase",
+  "name": "@team/auto-rebase-code",
   "version": "0.1.0",
   "description": "automatically gets the main branch code",
   "main": "index.js",
