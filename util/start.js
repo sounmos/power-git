@@ -7,7 +7,7 @@ const rootDir = getFileText('../filePath/root-dir-path.txt')
 
 const logFile = `${getLogFilePath()}/代码rebase出现问题-请及时查看.txt`
 
-const configFilePath = getFileText('../filePath/config-path.txt')
+let configFilePath = getFileText('../filePath/config-path.txt')
 
 let configJson = []
 
@@ -16,7 +16,10 @@ function start () {
   if (!rootDir) {
     throw new Error(`未明确项目所在文件夹，尝试使用 'merge -setroot <文件路径>' 命令`)
   }
-  if (configFilePath.startsWith('../const')) {
+  if (configFilePath === '') {
+    configFilePath = '../filePath/config-default.json'
+  }
+  if (configFilePath.startsWith('../')) {
     configJson = require(path.join(__dirname, configFilePath))
   } else {
     configJson = require(configFilePath)

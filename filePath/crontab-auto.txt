@@ -1,1 +1,1 @@
-*/1 * * * * echo pref >> ~/Desktop/prev.txt && source /etc/profile && /usr/local/bin/node /Users/bytedance/chrome/auto-rebase/lib/auto-rebase.js && echo "$?" >> ~/Desktop/status.txt
+*/1 * * * * source /etc/profile && /usr/local/bin/node /Users/bytedance/chrome/auto-rebase/lib/auto-rebase.js

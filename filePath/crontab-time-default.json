@@ -1,0 +1,27 @@
+[
+  {
+    "type": "week",
+    "time": "",
+    "step": ""
+  },
+  {
+    "type": "month",
+    "time": "",
+    "step": ""
+  },
+  {
+    "type": "day",
+    "time": "",
+    "step": ""
+  },
+  {
+    "type": "hour",
+    "time": "",
+    "step": ""
+  },
+  {
+    "type": "minute",
+    "time": "",
+    "step": 1
+  }
+]
