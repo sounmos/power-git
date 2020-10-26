@@ -12,7 +12,7 @@ const configFilePath = getFileText('../filePath/config-path.txt')
 let configJson = []
 
 // 开始方法，校验部分文件是否存在
-function self () {
+function start () {
   if (!rootDir) {
     throw new Error(`未明确项目所在文件夹，尝试使用 'merge -setroot <文件路径>' 命令`)
   }
@@ -137,4 +137,4 @@ function isArray (data) {
 function getFileText (file) {
   return fs.readFileSync(path.join(__dirname, file)).toString().trim()
 }
-module.exports = self
+module.exports = start

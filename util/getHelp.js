@@ -10,6 +10,8 @@ function getHelp () {
     -h | -help 获取帮助
     
     -v | -V | -version 获取版本内容
+    
+    powergit 手动获取
   `)
 }
 /*

@@ -110,4 +110,4 @@ powergit
 
 `-h -help`: 用来获取帮助信息  
 
-`-self`: 功能和 `powergit` 相同。也是一个别名形式  
+`-start`: 功能和 `powergit` 相同。也是一个别名形式  
