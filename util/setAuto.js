@@ -21,7 +21,7 @@ function writeCrontab (nodePath, runJs, cronPath) {
   spawn(`echo '*/1 * * * * echo 'pref' >> ~/Desktop/prev.txt && source /etc/profile && ${nodePath} ${runJs} && echo "$?" >> ~/Desktop/status.txt' > ${cronPath}`, { shell: true })
 
   spawn(`cat ${cronPath} | crontab -`, { shell: true })
-  console.log('已修改为定时同步，可使用 powergit -stop 停止')
+  console.log('已修改为定时同步，可使用 pgit -stop 停止')
 }
 
 module.exports = setAuto

@@ -11,7 +11,7 @@ function getHelp () {
     
     -v | -V | -version 获取版本内容
     
-    powergit 手动获取
+    pgit 手动获取
   `)
 }
 /*

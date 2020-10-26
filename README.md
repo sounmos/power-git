@@ -13,7 +13,7 @@ npm install team-auto-rebase-code -g
 
 这样，在我们的电脑上会有这样一个命令
 
-- `powergit`
+- `pgit`
 
 安装结束了，我们来看如何使用这个小工具。
 
@@ -35,7 +35,7 @@ npm install team-auto-rebase-code -g
 接下来我们通过下方命令来设置
 
 ```javascript
-powergit -setroot /Users/username/Desktop
+pgit -setroot /Users/username/Desktop
 ```
 
 `setroot`后面跟的是一个绝对路径。不要设置相对路径，这样会导致项目找不到，从而不能正确使用本工具。
@@ -81,7 +81,7 @@ powergit -setroot /Users/username/Desktop
 好。相信到这里，大家已经将配置文件创建成功了。接下来我们使用下面的命令关联配置文件
 
 ```javascript
-powergit -config  /Users/username/Desktop/pull-config.json
+pgit -config  /Users/username/Desktop/pull-config.json
 ```
 
 注意：
@@ -95,7 +95,7 @@ powergit -config  /Users/username/Desktop/pull-config.json
 上面的两个配置完成后，我们就可以通过本工具进行代码同步。同步代码的命令就是 
 
 ```javascript
-powergit 
+pgit 
 ```
 
 注意：
@@ -110,4 +110,4 @@ powergit
 
 `-h -help`: 用来获取帮助信息  
 
-`-start`: 功能和 `powergit` 相同。也是一个别名形式  
+`-start`: 功能和 `pgit` 相同。也是一个别名形式  
