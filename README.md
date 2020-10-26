@@ -8,7 +8,7 @@
 首先我们需要全局安装我们的命令
 
 ```javascript
-npm install team-auto-rebase-code -g
+npm install power-git -g
 ```
 
 这样，在我们的电脑上会有这样一个命令
