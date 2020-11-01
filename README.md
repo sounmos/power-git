@@ -52,6 +52,10 @@ pgit -setroot /Users/username/Desktop
 
 ###### 2. 接下来我们需要设置rebase代码的配置文件。
 
+目前power-git支持`json`及`yaml`配置
+
+####### json配置
+
 首先创建一个 `pull-config.json` 文件
 
 接下来我们根据下面的格式来书写我们的配置
@@ -70,7 +74,24 @@ pgit -setroot /Users/username/Desktop
 ]
 ```
 
-说明：
+####### yaml配置
+首先创建一个 `pull-config.yml` 文件
+
+接下来我们根据下面的格式来书写我们的配置
+
+```yaml
+-
+  project: test
+  branch:
+    - branch1
+    - branch2
+    - branch3
+    - branch4
+```
+> 关于yaml语法，详见该教程：http://www.ruanyifeng.com/blog/2016/07/yaml.html
+
+
+####### 说明
 
 - 整个配置文件是由一个数组包裹。
 
@@ -86,8 +107,14 @@ pgit -setroot /Users/username/Desktop
 
 好。相信到这里，大家已经将配置文件创建成功了。接下来我们使用下面的命令关联配置文件
 
+👇使用json
 ```javascript
 pgit -config  /Users/username/Desktop/pull-config.json
+```
+
+👇使用yaml
+```javascript
+pgit -config  /Users/username/Desktop/pull-config.yaml
 ```
 
 注意：
