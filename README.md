@@ -54,7 +54,7 @@ pgit -setroot /Users/username/Desktop
 
 目前power-git支持`json`及`yaml`配置
 
-####### json配置
+###### json配置
 
 首先创建一个 `pull-config.json` 文件
 
@@ -74,7 +74,7 @@ pgit -setroot /Users/username/Desktop
 ]
 ```
 
-####### yaml配置
+###### yaml配置
 首先创建一个 `pull-config.yml` 文件
 
 接下来我们根据下面的格式来书写我们的配置
@@ -91,7 +91,7 @@ pgit -setroot /Users/username/Desktop
 > 关于yaml语法，详见该教程：http://www.ruanyifeng.com/blog/2016/07/yaml.html
 
 
-####### 说明
+###### 说明
 
 - 整个配置文件是由一个数组包裹。
 
