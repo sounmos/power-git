@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const spawn = require("child_process").spawnSync;
 const getLogFilePath = require(path.join(__dirname, './getLogFilePath.js'))
+const yaml = require('js-yaml');
 
 const rootDir = getFileText('../filePath/root-dir-path.txt')
 
@@ -19,12 +20,40 @@ function start () {
   if (configFilePath === '') {
     configFilePath = '../filePath/config-default.json'
   }
-  if (configFilePath.startsWith('../')) {
-    configJson = require(path.join(__dirname, configFilePath))
-  } else {
-    configJson = require(configFilePath)
+
+  process_config_file();
+
+  start_pull();
+}
+
+function process_config_file() {
+  const configPath = configFilePath.startsWith('../') ? path.join(__dirname, configFilePath): configFilePath;
+  const extName = path.extname(configPath);
+
+  switch (extName) {
+    case '.json':
+      get_json_config(configPath);
+      break;
+    case '.yml':
+      get_yaml_config(configPath);
+      break;
+    default:
+      get_default_config();
   }
-  start_pull()
+}
+function get_json_config(configPath) {
+  configJson = require(configPath);
+}
+function get_yaml_config(configPath) {
+  try {
+    configJson = yaml.safeLoad(fs.readFileSync(configPath, 'utf8'));
+  } catch (e) {
+    get_default_config();
+  }
+}
+function get_default_config() {
+  const defaultPath = '../filePath/config-default.json';
+  configJson = require(defaultPath);
 }
 
 // 校验配置文件格式
