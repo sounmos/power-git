@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/sounmos/auto-rebase/issues"
   },
-  "homepage": "https://github.com/sounmos/auto-rebase#readme"
+  "homepage": "https://github.com/sounmos/auto-rebase#readme",
+  "dependencies": {
+    "js-yaml": "^3.14.0"
+  }
 }
